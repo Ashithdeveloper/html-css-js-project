@@ -1,0 +1,29 @@
+body {
+    height: 100vh; /* Ensure the body takes the full viewport height */
+    margin: 0;
+    background-color: black;
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+span {
+    background: url(https://cdn4.iconfinder.com/data/icons/twitter-29/512/166_Heart_Love_Like_Twitter-512.png);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-size: cover;
+    animation: animate 3s linear; /* Match the animation duration with JavaScript setTimeout */
+    pointer-events: none; /* Prevent the span from blocking mouse events */
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+    100% {
+        transform: translate(-50%, -500%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}
